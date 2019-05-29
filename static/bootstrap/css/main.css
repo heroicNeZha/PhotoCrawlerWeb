@@ -1,0 +1,231 @@
+body {
+    background-image: url("/static/img/body_bg.jpg")
+}
+
+.search-result a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-bg {
+    background: #00b4ef;
+}
+
+.form-horizontal {
+    /*background: #fff;*/
+    padding-bottom: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.form-horizontal .heading {
+    display: block;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 35px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 30px;
+}
+
+.form-horizontal .form-group {
+    padding: 0 40px;
+    margin: 0 0 25px 0;
+    position: relative;
+}
+
+.form-horizontal .form-control {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 0 20px 0 45px;
+    height: 40px;
+    transition: all 0.3s ease 0s;
+}
+
+.form-horizontal .form-control:focus {
+    background: #e0e0e0;
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.form-horizontal .form-group i {
+    position: absolute;
+    top: 12px;
+    left: 60px;
+    font-size: 17px;
+    color: #c8c8c8;
+    transition: all 0.5s ease 0s;
+}
+
+.form-horizontal .form-control:focus + i {
+    color: #00b4ef;
+}
+
+.form-horizontal .fa-question-circle {
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 60px;
+    font-size: 20px;
+    color: #808080;
+    transition: all 0.5s ease 0s;
+}
+
+.form-horizontal .fa-question-circle:hover {
+    color: #000;
+}
+
+.form-horizontal .main-checkbox {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #11a3fc;
+    border-radius: 50%;
+    position: relative;
+    margin: 5px 0 0 5px;
+    border: 1px solid #11a3fc;
+}
+
+.form-horizontal .main-checkbox label {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.form-horizontal .main-checkbox label:after {
+    content: "";
+    width: 10px;
+    height: 5px;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.form-horizontal .main-checkbox input[type=checkbox] {
+    visibility: hidden;
+}
+
+.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+
+.form-horizontal .text {
+    float: left;
+    margin-left: 7px;
+    line-height: 20px;
+    padding-top: 5px;
+    text-transform: capitalize;
+}
+
+.form-horizontal .btn {
+    float: right;
+    font-size: 14px;
+    color: #fff;
+    background: #00b4ef;
+    border-radius: 30px;
+    padding: 10px 25px;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.5s ease 0s;
+}
+
+@media only screen and (max-width: 479px) {
+    .form-horizontal .form-group {
+        padding: 0 25px;
+    }
+
+    .form-horizontal .form-group i {
+        left: 45px;
+    }
+
+    .form-horizontal .btn {
+        padding: 10px 20px;
+    }
+}
+
+#main-nav {
+    margin-left: 1px;
+}
+
+#main-nav.nav-tabs.nav-stacked > li > a {
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4A515B;
+    background: #E9E9E9;
+    background: -moz-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAFAFA), color-stop(100%, #E9E9E9));
+    background: -webkit-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+    background: -o-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+    background: -ms-linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+    background: linear-gradient(top, #FAFAFA 0%, #E9E9E9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')";
+    border: 1px solid #D5D5D5;
+    border-radius: 4px;
+}
+
+#main-nav.nav-tabs.nav-stacked > li > a > span {
+    color: #4A515B;
+}
+
+#main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover {
+    color: #FFF;
+    background: #3C4049;
+    background: -moz-linear-gradient(top, #4A515B 0%, #3C4049 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4A515B), color-stop(100%, #3C4049));
+    background: -webkit-linear-gradient(top, #4A515B 0%, #3C4049 100%);
+    background: -o-linear-gradient(top, #4A515B 0%, #3C4049 100%);
+    background: -ms-linear-gradient(top, #4A515B 0%, #3C4049 100%);
+    background: linear-gradient(top, #4A515B 0%, #3C4049 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4A515B', endColorstr='#3C4049')";
+    border-color: #2B2E33;
+}
+
+#main-nav.nav-tabs.nav-stacked > li.active > a, #main-nav.nav-tabs.nav-stacked > li > a:hover > span {
+    color: #FFF;
+}
+
+#main-nav.nav-tabs.nav-stacked > li {
+    margin-bottom: 4px;
+}
+
+/*定义二级菜单样式*/
+.secondmenu a {
+    font-size: 13px;
+    color: #4A515B;
+    text-align: center;
+}
+
+.navbar-static-top {
+    background-color: #212121;
+    margin-bottom: 5px;
+}
+
+.navbar-brand {
+    background: url('') no-repeat 10px 8px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 50px;
+    color: #fff;
+}
+
+.page-footer {
+    border-top: 1px solid #e5e5e5;
+    color: #777;
+    padding: 19px 0;
+    background-color: #f5f5f5;
+}

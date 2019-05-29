@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/main.css' %}">
+    <title>搜索结果</title>
+</head>
+<body>
+<div class="page-header">
+{#    <h1 style="margin-left: 8%">微博 搜索#}
+{#        <small>{{ keyword }}</small>#}
+{#    </h1>#}
+    <form role="form" method="post">
+        {% csrf_token %}
+        <div class="col-md-2" style="margin-left: 2%"><img src="{% static "img/search_logo_2x.png" %}"></div>
+        <div class="col-md-offset-2 input-group col-md-4">
+            <input name="keyword" type="text" class="form-control" placeholder="{{ keyword }}">
+            <span class="input-group-btn">
+               <button type="submit" class="btn btn-info btn-search">查找</button>
+            </span>
+        </div>
+    </form>
+</div>
+<div class="row">
+    <div class="col-md-offset-1 col-md-6">
+        <ul class="list-unstyled">
+            {% for user in users %}
+                <div class="row search-result">
+                    <div class="col-md-2" style="width: 15%;padding-left: 30px;">
+                        <img style="height: 60px" class="img-rounded" src="{{ user.cover }}" alt="">
+                    </div>
+                    <div class="col-md-10" style="padding-left: 0px">
+                        <a target="_self" href="{% url 'crawler:user' user.uid %}"><h4>{{ user.name }}</h4></a>
+                        <p>{{ user.desc }}</p>
+                    </div>
+                </div>
+                <hr>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+</body>
+</html>

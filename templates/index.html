@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/main.css' %}">
+    <title>搜索</title>
+</head>
+<body>
+<div class="row text-center" style="margin-top: 15%">
+    <h1>搜索 微博用户</h1>
+    <br>
+    <form role="form" method="post" class="form-horizontal">
+        {% csrf_token %}
+        <div class="col-md-offset-4 input-group col-md-4">
+            <input name="keyword" type="text" class="form-control" placeholder="找想找的人">
+            <span class="input-group-btn">
+               <button type="submit" class="btn btn-info btn-search">查找</button>
+            </span>
+        </div>
+    </form>
+</div>
+</body>
+</html>
